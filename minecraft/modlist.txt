@@ -1,0 +1,130 @@
+mod list
+
+Core
+	-Sodium
+	-Lithium
+	-All the Leaks
+	-FerriteCore
+	-Modernfix
+Shaders
+	-Iris, beta version
+
+FTB collection
+	-FTB essentials
+	-FTB Teams
+	-FTB Quest
+	-Ultimine
+
+All the mod core
+	- all the modium
+	-all the compressed
+	-all the arcanist gear
+	-almost unified
+	-all the ores
+	-Curios APO
+	-Patchouli
+
+JEI
+	-JEI base
+
+
+
+Utility
+	-Appleskin
+	-OverLoaded Armor 
+	-AttributeFix
+	-Clumps
+	-Eccentric Tome
+	-Epitaphs
+	-FTB Ultimine
+	-Jade
+		-Jade Addons
+	-JourneyMap
+	-Mouse Tweaks
+	-No Chat Reports
+	-Chat animation
+	-Too Fast
+	-Nemo's Inventory Sorting
+	-Masurements
+
+World
+	-Oh The Biomes We've Gone
+	-The Aether
+		-Explore Ruins: The Aether
+	-Accelerated Decay
+	-GeOre
+		-GeOre Nouveau
+	-BumbleZone
+	-Relics & Artifacts
+	-Waystones
+
+Decoration
+	-Handcrafted
+	-Chipped
+	-Chisel Chipped Integration
+	-Comforts
+	-Connected Glass
+	-Framed Blocks
+		-Frmaved Blocks + Building Gadget
+	-Supplementaries
+	-Trashcan
+
+Tech
+	-Applied Energistics 2
+		-Addon
+			-Applied Experienced
+			-Applied Flux
+			-Applied Mekanistics
+			-AppliedE
+			-Ars Energistique
+		-AdvancedAE
+		-AE2 Things
+		-AE2 Crafting Tree
+		-AEInfinityBooster
+		-ME Requester
+		-MEGA Cells
+		-Applied Energistics 2 Wireless Terminals
+		-Growth Accelerator Tiers
+	-Building Gadgets
+	-Construction Sticks
+	-DimStorage
+		-Dim Botany Pots
+	-Draconic
+	-Extreme Reactors
+	-Flux Networks
+	-Iron Furnace
+	-Cobblegen Galore
+	-Just Dire Things
+	-Mekanism
+		-Mekanism Generators
+		-Mekanism Tools
+	-Sophisticated Core
+		-Backpacks
+		-Storage
+	-Shellbound for Airship
+	
+	Needs linux jail or other solution 
+	-Create
+		-Jaffacakes
+		-Create Aero
+		-Areo Curio API
+
+Food and Farming
+	-Farmers Delight
+	-Industrial Foregoing
+	-Productive Bees
+	-Botany Pots
+		-Botany Pot Tiers
+	-Farming and Cooking for blockheads
+
+Magic
+	-Ars Nouveau
+		-Ars Additions
+		-Ars Elemancy
+		-Ars Elemental
+		-Ars Ocultas
+	-Occultism
+	-ProjectE
+	-Apotheosis Collection
+		-Enchanting
+		-Spawners

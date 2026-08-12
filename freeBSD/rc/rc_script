@@ -1,0 +1,21 @@
+#!/bin/sh
+
+. /etc/rc.subr
+
+name="dummy"
+rcvar=dummy_enable
+
+start_cmd="${name}_start"
+stop_cmd=":"
+
+load_rc_config $name
+: ${dummy_enable:=no}
+: ${dummy_msg="Nothing started."}
+
+dummy_start()
+{
+	echo "$dummy_msg"
+}
+
+load_rc_config $name
+run_rc_command "$1"
