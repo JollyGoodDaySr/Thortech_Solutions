@@ -8,11 +8,15 @@ Core
 	-Modernfix
 Shaders
 	-Iris, beta version
+	
+Kubejs
+	-KubeJS
 
 FTB collection
 	-FTB essentials
 	-FTB Teams
 	-FTB Quest
+	-FTB Chunk claim
 	-Ultimine
 
 All the mod core
@@ -34,7 +38,7 @@ Utility
 	-OverLoaded Armor 
 	-AttributeFix
 	-Clumps
-	-Eccentric Tome
+	-Akashic
 	-Epitaphs
 	-FTB Ultimine
 	-Jade
@@ -51,7 +55,7 @@ World
 	-Oh The Biomes We've Gone
 	-The Aether
 		-Explore Ruins: The Aether
-	-Accelerated Decay
+	-Fast Leaf Decay
 	-GeOre
 		-GeOre Nouveau
 	-BumbleZone
@@ -68,6 +72,7 @@ Decoration
 		-Frmaved Blocks + Building Gadget
 	-Supplementaries
 	-Trashcan
+	-Mesurments
 
 Tech
 	-Applied Energistics 2
@@ -85,6 +90,7 @@ Tech
 		-MEGA Cells
 		-Applied Energistics 2 Wireless Terminals
 		-Growth Accelerator Tiers
+		-ExtendedAE
 	-Building Gadgets
 	-Construction Sticks
 	-DimStorage
@@ -102,10 +108,11 @@ Tech
 		-Backpacks
 		-Storage
 	-Shellbound for Airship
-	
+	-CC Tweaked - updated not on curseforge
+
 	Needs linux jail or other solution 
 	-Create
-		-Jaffacakes
+		-Jaffacakes redux
 		-Create Aero
 		-Areo Curio API
 
@@ -115,7 +122,7 @@ Food and Farming
 	-Productive Bees
 	-Botany Pots
 		-Botany Pot Tiers
-	-Farming and Cooking for blockheads
+	-Cooking for blockheads
 
 Magic
 	-Ars Nouveau

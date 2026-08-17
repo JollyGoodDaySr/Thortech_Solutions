@@ -1,0 +1,13 @@
+{
+  "itemGroup.projectc": "Example Mod Tab",
+  "block.projectc.example_block": "Example Block",
+  "item.projectc.example_item": "Example Item",
+
+  "projectc.configuration.title": "Alchemical Coke Configs",
+  "projectc.configuration.section.projectc.common.toml": "Alchemical Coke Configs",
+  "projectc.configuration.section.projectc.common.toml.title": "Alchemical Coke Configs",
+  "projectc.configuration.items": "Item List",
+  "projectc.configuration.logDirtBlock": "Log Dirt Block",
+  "projectc.configuration.magicNumberIntroduction": "Magic Number Text",
+  "projectc.configuration.magicNumber": "Magic Number"
+}

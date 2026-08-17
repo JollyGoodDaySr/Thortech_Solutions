@@ -1,0 +1,20 @@
+// 1.21.1	2024-12-06T15:47:09.8264226	vanilla/Extreme Reactors 2 blocks tags
+3ea27c7a1426ae4e91e505b4abc353b64cbc9d74 data/c/tags/block/ores.json
+602355a666c5aa659d0d186f807b90405c4f3ab0 data/c/tags/block/ores/anglesite.json
+672b246bb0b0ea88cc2591e5c0b53906299e0e4c data/c/tags/block/ores/benitoite.json
+29fb552564350095c187f0f264d964c0bc7eb872 data/c/tags/block/ores/uranium.json
+9011f842b25127be2a5023b2666de12571f77f1e data/c/tags/block/ores/yellorite.json
+a35a6a4b695fc18ddd3778a771683dfda7147c5b data/c/tags/block/storage_blocks.json
+bd39d52597bfdec27955cb6eed88934c0a75d19c data/c/tags/block/storage_blocks/blutonium.json
+0d70fbaf110379dc16d026bda0b2a1e9decde5ac data/c/tags/block/storage_blocks/cyanite.json
+4f48ede7634b980f4a7b704f3dc032bb0bc18048 data/c/tags/block/storage_blocks/enderium.json
+77cd451b36a52036482eea9422190cab8eb5601a data/c/tags/block/storage_blocks/graphite.json
+bf02dc3eea0f4a06cb5e7c443bf64c3b7688c07e data/c/tags/block/storage_blocks/inanite.json
+c848cad38694cf1139523373de1b3d902b7edbf3 data/c/tags/block/storage_blocks/insanite.json
+abe77b9a0aeb2d1ad18bcb5c6ee69b8d50673a1c data/c/tags/block/storage_blocks/ludicrite.json
+5bd58d2a964606ea8f1b4d4de37a825d76e1a348 data/c/tags/block/storage_blocks/magentite.json
+df2dda6cfac4dce348828597cd495dee08aae806 data/c/tags/block/storage_blocks/raw_yellorium.json
+c21df039014d9e6f7e904fe92fd78e6e51440a7b data/c/tags/block/storage_blocks/ridiculite.json
+8b7acd00b5b9f7a4c4b562e5ec289be490f4ffd4 data/c/tags/block/storage_blocks/yellorium.json
+457569151e6f8ae5402aae692a3e8100fbd40662 data/minecraft/tags/block/mineable/pickaxe.json
+457569151e6f8ae5402aae692a3e8100fbd40662 data/minecraft/tags/block/needs_iron_tool.json

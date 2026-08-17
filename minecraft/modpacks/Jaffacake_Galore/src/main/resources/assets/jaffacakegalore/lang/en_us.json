@@ -1,0 +1,13 @@
+{
+  "itemGroup.jaffacakegalore": "Example Mod Tab",
+  "block.jaffacakegalore.example_block": "Example Block",
+  "item.jaffacakegalore.example_item": "Example Item",
+
+  "jaffacakegalore.configuration.title": "Jaffacake Galore Configs",
+  "jaffacakegalore.configuration.section.jaffacakegalore.common.toml": "Jaffacake Galore Configs",
+  "jaffacakegalore.configuration.section.jaffacakegalore.common.toml.title": "Jaffacake Galore Configs",
+  "jaffacakegalore.configuration.items": "Item List",
+  "jaffacakegalore.configuration.logDirtBlock": "Log Dirt Block",
+  "jaffacakegalore.configuration.magicNumberIntroduction": "Magic Number Text",
+  "jaffacakegalore.configuration.magicNumber": "Magic Number"
+}

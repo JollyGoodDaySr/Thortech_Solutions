@@ -1,0 +1,17 @@
+{
+  "type": "bigreactors:reprocessor",
+  "fluid": {
+    "amount": 1000,
+    "id": "bigreactors:cyanite"
+  },
+  "result": {
+    "count": 1,
+    "id": "bigreactors:ludicrite_ingot"
+  },
+  "waste": {
+    "count": 2,
+    "ingredient": {
+      "item": "bigreactors:blutonium_ingot"
+    }
+  }
+}

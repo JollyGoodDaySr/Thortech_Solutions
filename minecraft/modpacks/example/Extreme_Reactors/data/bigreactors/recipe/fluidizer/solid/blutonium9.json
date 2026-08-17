@@ -1,0 +1,13 @@
+{
+  "type": "bigreactors:fluidizersolid",
+  "ingredient": {
+    "count": 1,
+    "ingredient": {
+      "item": "bigreactors:blutonium_block"
+    }
+  },
+  "result": {
+    "amount": 9000,
+    "id": "bigreactors:blutonium"
+  }
+}

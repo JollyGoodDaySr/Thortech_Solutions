@@ -1,0 +1,7 @@
+{
+  "parent": "bigreactors:block/reactor/reinforced/casing_template",
+  "textures": {
+    "south": "bigreactors:block/reactor/reinforced/casing_up",
+    "up": "bigreactors:block/reactor/reinforced/casing_down"
+  }
+}
