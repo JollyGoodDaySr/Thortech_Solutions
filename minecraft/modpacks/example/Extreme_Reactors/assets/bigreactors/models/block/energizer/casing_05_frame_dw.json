@@ -1,7 +1,0 @@
-{
-  "parent": "bigreactors:block/energizer/casing_template",
-  "textures": {
-    "down": "bigreactors:block/energizer/casing_left",
-    "west": "bigreactors:block/energizer/casing_down"
-  }
-}

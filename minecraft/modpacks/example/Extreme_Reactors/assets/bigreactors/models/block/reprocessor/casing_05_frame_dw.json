@@ -1,7 +1,0 @@
-{
-  "parent": "bigreactors:block/reprocessor/casing_template",
-  "textures": {
-    "down": "bigreactors:block/reprocessor/casing_left",
-    "west": "bigreactors:block/reprocessor/casing_down"
-  }
-}

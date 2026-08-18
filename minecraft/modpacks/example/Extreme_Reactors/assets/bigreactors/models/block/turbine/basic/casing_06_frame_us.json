@@ -1,7 +1,0 @@
-{
-  "parent": "bigreactors:block/turbine/basic/casing_template",
-  "textures": {
-    "south": "bigreactors:block/turbine/basic/casing_up",
-    "up": "bigreactors:block/turbine/basic/casing_down"
-  }
-}

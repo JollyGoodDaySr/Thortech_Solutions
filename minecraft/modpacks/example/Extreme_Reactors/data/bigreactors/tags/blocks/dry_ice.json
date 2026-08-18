@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "powah:dry_ice",
-      "required": false
-    }
-  ]
-}
