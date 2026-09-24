@@ -1,0 +1,10 @@
+ext_int = "vtnet0"
+#
+tcp_services  = "{ 22, 80, 443, 25565}"
+udp_services  = "{ 25565, 24454, 53}"
+#
+block all
+#
+pass on $ext_int proto tcp to any port $tcp_services keep state
+#
+pass on #ext_int proto udp to any port $udp_services keep state

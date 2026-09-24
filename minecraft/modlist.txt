@@ -1,36 +1,63 @@
 mod list
 
 Core
-	-Sodium
+	-Sodium - client only
 	-Lithium
 	-All the Leaks
 	-FerriteCore
 	-Modernfix
-Shaders
+	-Immediately Fast - Client
+	-Fast Suite
+	-Better Combat
+		-Better Mob Combat
+		-Combat Roll
+	-Accessories
+		-Accessories Compat Layer
+
+
+Shaders - Client only
 	-Iris, beta version
+		-Iris
 	
 Kubejs
-	-KubeJS
+
+Sound - Client only
+	-AmbientSounds6
+	-presence footsteps
+		-sable compat
+	-sound physics
 
 FTB collection
 	-FTB essentials
 	-FTB Teams
 	-FTB Quest
-	-FTB Chunk claim
 	-Ultimine
 
 All the mod core
-	- all the modium
 	-all the compressed
-	-all the arcanist gear
 	-almost unified
 	-all the ores
-	-Curios APO
+	-Curios API
 	-Patchouli
 
 JEI
 	-JEI base
+		-JER
+		-JEP
+		-JEED
+		-JEBR
 
+RPG Series
+		-Spell Engine
+		-Spell Power Attributes
+		-runes
+		-Archers
+		-Armory
+		-Jewelry
+		-Paladins
+		-Rogues
+		-Wizzards
+		-Skill Tree
 
 
 Utility
@@ -40,30 +67,37 @@ Utility
 	-Clumps
 	-Akashic
 	-Epitaphs
-	-FTB Ultimine
 	-Jade
 		-Jade Addons
 	-JourneyMap
-	-Mouse Tweaks
 	-No Chat Reports
-	-Chat animation
-	-Too Fast
-	-Nemo's Inventory Sorting
+	-Chat animation - client only
+	-Mouse Tweaks - client only
+	-Inventory Profiles Next - client only
 	-Masurements
+	-Dynamic RPG Resource Bars
+	-Entity Culling
+	-Callable Horses
 
 World
+	-Leaves Be Gone
 	-Oh The Biomes We've Gone
 	-The Aether
 		-Explore Ruins: The Aether
-	-Fast Leaf Decay
 	-GeOre
 		-GeOre Nouveau
 	-BumbleZone
-	-Relics & Artifacts
-	-Waystones
+	-Relics
+	-Immersive Gateways
+	-Serene Seasons
+	-Easy NPC
+	-MCA Reborn
+	-falling leaves - client side only
+	-visuality reforged - client side only
 
 Decoration
 	-Handcrafted
+	-Paladins Furniture
 	-Chipped
 	-Chisel Chipped Integration
 	-Comforts
@@ -72,31 +106,21 @@ Decoration
 		-Frmaved Blocks + Building Gadget
 	-Supplementaries
 	-Trashcan
-	-Mesurments
+	-all the colors/pride
 
 Tech
 	-Applied Energistics 2
-		-Addon
-			-Applied Experienced
-			-Applied Flux
-			-Applied Mekanistics
-			-AppliedE
-			-Ars Energistique
 		-AdvancedAE
 		-AE2 Things
 		-AE2 Crafting Tree
 		-AEInfinityBooster
 		-ME Requester
-		-MEGA Cells
 		-Applied Energistics 2 Wireless Terminals
 		-Growth Accelerator Tiers
 		-ExtendedAE
 	-Building Gadgets
 	-Construction Sticks
-	-DimStorage
-		-Dim Botany Pots
 	-Draconic
-	-Extreme Reactors
 	-Flux Networks
 	-Iron Furnace
 	-Cobblegen Galore
@@ -108,30 +132,25 @@ Tech
 		-Backpacks
 		-Storage
 	-Shellbound for Airship
-	-CC Tweaked - updated not on curseforge
-
-	Needs linux jail or other solution 
+	-CC Tweaked - not on curseforge
+		-CC:Sable
 	-Create
 		-Jaffacakes redux
-		-Create Aero
+		-Create Aeronautics
+			-Sable dupe fix
 		-Areo Curio API
 
 Food and Farming
 	-Farmers Delight
 	-Industrial Foregoing
 	-Productive Bees
-	-Botany Pots
-		-Botany Pot Tiers
 	-Cooking for blockheads
 
 Magic
 	-Ars Nouveau
 		-Ars Additions
-		-Ars Elemancy
-		-Ars Elemental
 		-Ars Ocultas
 	-Occultism
 	-ProjectE
-	-Apotheosis Collection
-		-Enchanting
-		-Spawners
+	-Neo Vitae
+	-Modonomicon

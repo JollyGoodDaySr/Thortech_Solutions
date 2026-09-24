@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# PROVIDE: minecraft
+# REQUIRE: LOGIN networking
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="minecraft"
+rcvar=minecraft_enable
+
+load_config_file() {
+    load_rc_config $name
+}
+
+# Configured for your user 'thor'
+minecraft_user="${minecraft_user:-thor}"
+minecraft_dir="${minecraft_dir:-/usr/local/minecraft}"
+session_name="minecraft"
+
+minecraft_start()
+{
+    if [ -z "$minecraft_user" ]; then
+        err 1 "minecraft_user is not set."
+    fi
+
+    echo "Starting Minecraft server in tmux session..."
+    su -m "$minecraft_user" -c "tmux new-session -d -s '$session_name' 'sh $minecraft_dir/start-server.sh'"
+}
+
+minecraft_stop()
+{
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+        echo "Sending stop command to Minecraft server..."
+        tmux send-keys -t "$session_name" "stop" Enter
+        
+        # Safety timeout: wait maximum 60 seconds (30 iterations * 2 seconds)
+        echo "Waiting for server to stop gracefully..."
+        timeout=30
+        while [ $timeout -gt 0 ] && tmux has-session -t "$session_name" 2>/dev/null; do
+            sleep 2
+            timeout=$((timeout - 1))
+        done
+
+        # If it's still running after the timeout, kill it forcefully
+        if tmux has-session -t "$session_name" 2>/dev/null; then
+            echo "Server failed to stop within 60 seconds. Forcing shutdown..."
+            tmux kill-session -t "$session_name"
+        else
+            echo "Minecraft server stopped cleanly."
+        fi
+    else
+        echo "Minecraft tmux session not running."
+    fi
+}
+
+minecraft_status()
+{
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+        echo "Minecraft is running in tmux session '$session_name'."
+    else
+        echo "Minecraft is not running."
+    fi
+}
+
+minecraft_console()
+{
+    tmux attach-to-session -t "$session_name"
+}
+
+load_config_file
+run_rc_command "$1"
