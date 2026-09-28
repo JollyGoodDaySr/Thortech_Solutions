@@ -1,11 +1,8 @@
 /*
-	Project-E Base Balance
+	Create Produtive Beehive Integration
 	  Whats Included
 		*
-	  -Dark Matter
-	  -Red Matter
-	  -Philosophers Stone
-	  -Covalance Dust(low,med,high)
+	  -Vanilla Beehives
 
 */
 
@@ -13,35 +10,12 @@ ServerEvents.recipes(event => {
 
 //	*Recipes Removal*
 	
-	event.remove({output:'projecte:dark_matter'})
-	event.remove({output:'projecte:red_matter'})
-	event.remove({output:'projecte:philosophers_stone'})
-	event.remove({output:'projecte:low_covalence_dust'})
-	event.remove({output:'projecte:medium_covalence_dust'})
-	event.remove({output:'projecte:high_covalence_dust'})
-
-
-//	*Dark Matter*
-	
-	event.shapeless(
-	Item.of('projecte:dark_matter', 1),
-	[
-	  'projecte:philosophers_stone',
-	  'minecraft:diamond',
-	  'minecraft:diamond',
-	  'minecraft:diamond',
-	  'minecraft:diamond',
-	  'minecraft:iron_ingot',
-	  'minecraft:lapis_lazuli',
-	  'projecte:alchemical_coal',
-	  'minecraft:redstone'
-	]
-       )
+	event.remove({output:'minecraft:beehive'})
 
 //	*Philosophers Stone*
 
 	event.shaped(
-	Item.of('projecte:philosophers_stone', 1),
+	Item.of('minecraft:beehive', 1),
 	[
 	  ' A ',
 	  'BED',
