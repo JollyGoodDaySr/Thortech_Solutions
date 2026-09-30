@@ -1,7 +1,9 @@
 package com.smithing.immersive_smithing;
 
-import org.slf4j.Logger;
+import java.util.EnumMap;
+import java.util.Map;
 
+import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 // Minecraft Imports
@@ -10,6 +12,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 
 // NeoForge Imports
 import net.neoforged.bus.api.IEventBus;
@@ -27,39 +32,57 @@ public class ImmersiveSmithing {
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded. 
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-public ImmersiveSmithing(IEventBus modEventBus, ModContainer modContainer) {
-	ITEMS.register(modEventBus);
-	CREATIVE_MODE_TABS.register(modEventBus);
-}
-
 //Deffered Register for Items and Creative Tabs
 public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 //Register Items
-public static final DeferredItem<Item> WOOD_SMITHING_TEMPLATE = ITEMS.registerSimpleItem(
-  "wood_smithing_template",
-  new Item.Properties()
-);
+public enum ToolMaterial {
+  WOOD("wood", Tiers.WOOD),
+  STONE("stone", Tiers.STONE),
+  COPPER("copper", Tiers.STONE),
+  IRON("iron", Tiers.IRON),
+  GOLD("gold", Tiers.GOLD),
+  DIAMOND("diamond", Tiers.DIAMOND),
+  NETHERITE("netherite", Tiers.NETHERITE);
 
-public static final DeferredItem<Item> ANIMATED_BOOK = ITEMS.registerSimpleItem(
-  "animated_book",
-  new Item.Properties()
+  private final String name;
+  private final Tier tier;
 
-);
+  ToolMaterial(String name, Tier tier) {
+    this.name = name;
+    this.tier = tier;
+  }
+  public String getName() { return name; }
+  public Tier getTier() { return tier; }
 
-//Creative Mod Tabs
+}
+
+//Map to store registerd items dynamically
+public static final Map <ToolMaterial, DeferredItem<Item>> SMITHING_TEMPLATES = new EnumMap<>(ToolMaterial.class);
+public static final Map<ToolMaterial, DeferredItem<Item>> PICKAXE_HEADS = new EnumMap<>(ToolMaterial.class);
+public static final Map<ToolMaterial, DeferredItem<Item>> PICKAXE = new EnumMap<>(ToolMaterial.class);
+
+static {
+  //Register items using a loop
+  for (ToolMaterial mat : ToolMaterial.values()) {
+      SMITHING_TEMPLATES.put(mat, ITEMS.registerSimpleItem(mat.getName() + "_smithing_template", new Item.Properties()));
+      PICKAXE_HEADS.put(mat, ITEMS.registerSimpleItem(mat.getName() + "_pickaxe_head", new Item.Properties()));
+      PICKAXE.put(mat, ITEMS.register(mat.getName() + "_pickaxe", () -> new PickaxeItem(mat.getTier(), new Item.Properties().attributes(PickaxeItem.createAttributes(mat.getTier(), 1.0F, -2.8F)))));
+   }
+ }
+ public ImmersiveSmithing(IEventBus modEventBus, ModContainer modContainer) {
+  ITEMS.register(modEventBus);
+  CREATIVE_MODE_TABS.register(modEventBus);
+ }
+
 public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-  //Set title
   .title(Component.translatable("itemGroup." + MODID + ".example"))
-  //Set Icon
-  .icon(() -> new ItemStack(WOOD_SMITHING_TEMPLATE.get()))
-  //Add items to the creative tab
+  .icon(() -> new ItemStack(SMITHING_TEMPLATES.get(ToolMaterial.WOOD).get()))
   .displayItems((params, output) -> {
-	output.accept(WOOD_SMITHING_TEMPLATE.get());
-	output.accept(ANIMATED_BOOK.get());
+  	SMITHING_TEMPLATES.values().forEach(item -> output.accept(item.get()));
+	PICKAXE_HEADS.values().forEach(item -> output.accept(item.get()));
+	PICKAXE.values().forEach(item -> output.accept(item.get()));
   })
   .build()
  );

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-   "layer0": "immersivesmithing:item/animated_book"
+   "layer0": "immersivesmithing:item/stone_smithing_template"
   }
 }
