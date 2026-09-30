@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA"
+  ],
+  "key": {
+    "A": { "item": "minecraft:planks" }
+  },
+  "result": {
+    "id": "immersivesmithing:wood_pickaxe_head",
+    "count": 1
+  }
+}

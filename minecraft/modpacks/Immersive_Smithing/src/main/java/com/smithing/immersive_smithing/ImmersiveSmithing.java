@@ -9,6 +9,7 @@ import com.mojang.logging.LogUtils;
 // Minecraft Imports
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -62,13 +63,19 @@ public enum ToolMaterial {
 public static final Map <ToolMaterial, DeferredItem<Item>> SMITHING_TEMPLATES = new EnumMap<>(ToolMaterial.class);
 public static final Map<ToolMaterial, DeferredItem<Item>> PICKAXE_HEADS = new EnumMap<>(ToolMaterial.class);
 public static final Map<ToolMaterial, DeferredItem<Item>> PICKAXE = new EnumMap<>(ToolMaterial.class);
+public static final Map<ToolMaterial, DeferredItem<Item>> AXE_HEADS = new EnumMap<>(ToolMaterial.class);
+public static final Map<ToolMaterial, DeferredItem<Item>> AXE = new EnumMap<>(ToolMaterial.class);
 
 static {
   //Register items using a loop
   for (ToolMaterial mat : ToolMaterial.values()) {
       SMITHING_TEMPLATES.put(mat, ITEMS.registerSimpleItem(mat.getName() + "_smithing_template", new Item.Properties()));
+  //
       PICKAXE_HEADS.put(mat, ITEMS.registerSimpleItem(mat.getName() + "_pickaxe_head", new Item.Properties()));
       PICKAXE.put(mat, ITEMS.register(mat.getName() + "_pickaxe", () -> new PickaxeItem(mat.getTier(), new Item.Properties().attributes(PickaxeItem.createAttributes(mat.getTier(), 1.0F, -2.8F)))));
+  //
+      AXE_HEADS.put(mat, ITEMS.registerSimpleItem(mat.getName() + "_axe_head", new Item.Properties()));
+      AXE.put(mat, ITEMS.register(mat.getName() + "_axe", () -> new AxeItem(mat.getTier(), new Item.Properties().attributes(AxeItem.createAttributes(mat.getTier(), 6.0F, -3.1F)))));
    }
  }
  public ImmersiveSmithing(IEventBus modEventBus, ModContainer modContainer) {
@@ -82,7 +89,9 @@ public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB
   .displayItems((params, output) -> {
   	SMITHING_TEMPLATES.values().forEach(item -> output.accept(item.get()));
 	PICKAXE_HEADS.values().forEach(item -> output.accept(item.get()));
-	PICKAXE.values().forEach(item -> output.accept(item.get()));
+	PICKAXE.values().forEach(item -> output.accept(item.get())); 
+	AXE_HEADS.values().forEach(item -> output.accept(item.get()));
+	AXE.values().forEach(item -> output.accept(item.get()));
   })
   .build()
  );
